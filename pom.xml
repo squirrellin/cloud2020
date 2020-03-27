@@ -7,7 +7,11 @@
   <groupId>com.guigu.springcloud</groupId>
   <artifactId>springcloud2020</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <dependencies>
+    <modules>
+        <module>cloud-provicer-payment8001</module>
+    </modules>
+
+    <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-autoconfigure</artifactId>
