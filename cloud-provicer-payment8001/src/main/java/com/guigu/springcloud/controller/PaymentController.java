@@ -3,10 +3,7 @@ package com.guigu.springcloud.controller;
 import com.guigu.springcloud.entity.CommonResult;
 import com.guigu.springcloud.entity.Payment;
 import com.guigu.springcloud.service.PaymentService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -17,7 +14,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/payment/add")
-    public CommonResult create(Payment payment){
+    public CommonResult create(@RequestBody Payment payment){
 
         int result = paymentService.create(payment);
         return new CommonResult(200,"ok",result);
